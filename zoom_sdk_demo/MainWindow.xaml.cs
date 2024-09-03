@@ -16,6 +16,7 @@ using System.ComponentModel; // CancelEventArgs
 using ZOOM_SDK_DOTNET_WRAP;
 using System.Net.Http;
 using System.Text.Json;
+using System.Security.Claims;
 
 namespace zoom_sdk_demo
 {
@@ -31,6 +32,9 @@ namespace zoom_sdk_demo
         public MainWindow()
         {
             UserLogin();
+            UserData();
+            TodayClasses();
+            //ZoomClassJoin();
             InitializeComponent();
         }
 
@@ -44,14 +48,20 @@ namespace zoom_sdk_demo
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
             Console.WriteLine(await response.Content.ReadAsStringAsync());
+        }
 
+        private async void UserData()
+        {
             var client1 = new HttpClient();
             var request1 = new HttpRequestMessage(HttpMethod.Get, "https://enterpriseplanportal-api.edmingle.com/nuSource/api/v1/user/usermeta");
             request1.Headers.Add("apikey", "2d3321d936c68fb99fb880b050023bd9");
             var response1 = await client1.SendAsync(request1);
             response1.EnsureSuccessStatusCode();
             Console.WriteLine(await response1.Content.ReadAsStringAsync());
+        }
 
+        private async void TodayClasses()
+        {
             var client2 = new HttpClient();
             var request2 = new HttpRequestMessage(HttpMethod.Get, "https://enterpriseplanportal-api.edmingle.com/nuSource/api/v1/student/classes/period?date=08%20Nov%202023");
             request2.Headers.Add("apikey", "2d3321d936c68fb99fb880b050023bd9");
@@ -59,7 +69,10 @@ namespace zoom_sdk_demo
             var response2 = await client2.SendAsync(request2);
             response2.EnsureSuccessStatusCode();
             Console.WriteLine(await response2.Content.ReadAsStringAsync());
+        }
 
+        private async void ZoomClassJoin()
+        {
             var client3 = new HttpClient();
             var request3 = new HttpRequestMessage(HttpMethod.Post, "https://enterpriseplanportal-api.edmingle.com/nuSource/api/v1/liveclass/join/<attendanceId>");
             request3.Headers.Add("apikey", "2d3321d936c68fb99fb880b050023bd9");
