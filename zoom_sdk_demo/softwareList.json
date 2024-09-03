@@ -1,0 +1,27 @@
+{
+  "screenRecordingSoftware": [
+    "obs64",
+    "obs32",
+    "fraps",
+    "bandicam",
+    "camstudio",
+    "screencast",
+    "dxtory",
+    "snagit",
+    "camtasia",
+    "screenflow",
+    "gamebar",
+    "gamebarft",
+    "gdvr",
+    "amtraydvr",
+    "screenrec"
+  ],
+  "screenshotSoftware": [
+    "snippingtool",
+    "greenshot",
+    "lightshot",
+    "gyazo",
+    "picpick",
+    "screenrec"
+  ]
+}
