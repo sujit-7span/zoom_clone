@@ -7,14 +7,35 @@
         mc:Ignorable="d"
         Title="start_join_meeting" Height="348" Width="564"
         Closing="Wnd_Closing">
-    <Grid Height="348" Margin="0,0,0,-78" HorizontalAlignment="Left" Width="0">
-        <Label x:Name="label_UserName" Content="UserName" HorizontalAlignment="Left" Margin="32,21,-132,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="label_UserName_Copy2" Content="MeetingNumber" HorizontalAlignment="Left" Margin="32,159,-145,0" VerticalAlignment="Top" Width="113"/>
-        <TextBox x:Name="textBox_username_api" HorizontalAlignment="Left" Height="26" Margin="191,21,-364,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
-        <TextBox x:Name="textBox_meetingnumber_api" HorizontalAlignment="Left" Height="26" Margin="191,159,-364,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
-        <Button x:Name="button_start_api" Content="Start" HorizontalAlignment="Left" Height="44" Margin="57,203,-199,0" VerticalAlignment="Top" Width="142" Click="button_start_api_Click"/>
-        <Button x:Name="button_join_api" Content="Join" HorizontalAlignment="Left" Height="44" Margin="317,203,-459,0" VerticalAlignment="Top" Width="142" Click="button_join_api_Click"/>
-        <Label x:Name="label_AccessToken" Content="AccessToken" HorizontalAlignment="Left" VerticalAlignment="Top" Width="113" RenderTransformOrigin="0.525,-1.669" Height="26" Margin="32,98,-145,0"/>
-        <TextBox x:Name="textBox_AccessToken" HorizontalAlignment="Left" Height="26" Margin="191,98,-507,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316"/>
+    <Grid>
+        <!-- User Name Label -->
+        <Label x:Name="label_UserName" Content="UserName" HorizontalAlignment="Left" Margin="32,21,0,0" VerticalAlignment="Top" Width="100"/>
+
+        <!-- User Name TextBox -->
+        <TextBox x:Name="textBox_username_api" HorizontalAlignment="Left" Height="26" Margin="191,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+
+        <!-- Password Label -->
+        <Label x:Name="label_Password" Content="Password" HorizontalAlignment="Left" Margin="32,52,0,0" VerticalAlignment="Top" Width="100"/>
+
+        <!-- Password TextBox -->
+        <TextBox x:Name="textBox_Password" HorizontalAlignment="Left" Height="26" Margin="191,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+
+        <!-- Access Token Label -->
+        <Label x:Name="label_AccessToken" Content="AccessToken" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="32,83,0,0"/>
+
+        <!-- Access Token TextBox -->
+        <TextBox x:Name="textBox_AccessToken" HorizontalAlignment="Left" Height="26" Margin="191,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316"/>
+
+        <!-- Meeting Number Label -->
+        <Label x:Name="label_UserName_Copy2" Content="MeetingNumber" HorizontalAlignment="Left" Margin="32,114,0,0" VerticalAlignment="Top" Width="100"/>
+
+        <!-- Meeting Number TextBox -->
+        <TextBox x:Name="textBox_meetingnumber_api" HorizontalAlignment="Left" Height="26" Margin="191,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+
+        <!-- Start Button -->
+        <Button x:Name="button_start_api" Content="Start" HorizontalAlignment="Left" Height="44" Margin="57,150,0,0" VerticalAlignment="Top" Width="142" Click="button_start_api_Click"/>
+
+        <!-- Join Button -->
+        <Button x:Name="button_join_api" Content="Join" HorizontalAlignment="Left" Height="44" Margin="317,150,0,0" VerticalAlignment="Top" Width="142" Click="button_join_api_Click"/>
     </Grid>
 </Window>

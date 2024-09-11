@@ -241,7 +241,8 @@ namespace zoom_sdk_demo
                 withoutloginJoin = new JoinParam4WithoutLogin
                 {
                     meetingNumber = UInt64.Parse(textBox_meetingnumber_api.Text),
-                    userName = textBox_username_api.Text
+                    userName = textBox_username_api.Text,
+                    psw = textBox_Password.Text
                 }
             };
 
